@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Marvel</h1>
+<table class="table table-striped">
+    <thead>
+        <td>Name</td>
+        <td>Align</td>
+        <td>Eye</td>
+        <td>Hair</td>
+        <td>Sex</td>
+        <td>Alive</td>
+        <td>First appearance</td>
+    </thead>
+    <tbody>
+    {% for character in characters %}
+        <tr>
+            <td>{{character.name}}</td>
+            <td>{{character.align}}</td>
+            <td>{{character.eye}}</td>
+            <td>{{character.hair}}</td>
+            <td>{{character.sex}}</td>
+            <td>{{character.alive}}</td>
+            <td>{{character.year}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
